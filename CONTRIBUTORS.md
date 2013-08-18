@@ -83,5 +83,5 @@ In chronological order:
   * [2013-07-24] Modify makefile to respect user's LDFLAGS
   * [2013-07-24] Add stack markings for GNU as arch-independent for assembler files
 
-* [Your name or handle] <[email or website]>
-  * [Date] [Brief summary of your changes]
+* Lindsey Gray <lagray@fnal.gov>
+  * [2013-08-17] Add in ARM boilerplate, cloning from generic ARCH.
