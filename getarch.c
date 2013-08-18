@@ -719,6 +719,11 @@ USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #define OPENBLAS_SUPPORTED
 #endif
 
+#ifdef __arm__
+#include "cpuid_arm.c"
+#define OPENBLAS_SUPPORTED
+#endif
+
 #ifndef OPENBLAS_SUPPORTED
 #error "This arch/CPU is not supported by OpenBLAS."
 #endif
