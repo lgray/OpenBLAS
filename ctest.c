@@ -105,6 +105,10 @@ ARCH_POWER
 ARCH_MIPS64
 #endif
 
+#ifdef __arm__
+ARCH_ARM
+#endif
+
 #if defined(__mips32) || defined(__mips)
 ARCH_MIPS32
 #endif
