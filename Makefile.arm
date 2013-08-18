@@ -1,0 +1,16 @@
+CPP	= $(CC) -E
+RANLIB  = ranlib
+
+ifeq ($(LIBSUBARCH), v7)
+LIBNAME		= $(LIBPREFIX)_v7.a
+LIBNAME_P	= $(LIBPREFIX)_v7_p.a
+OPTION += -DARMV7 -mcpu=arm7
+endif
+
+ifndef SMP
+LIBCXML		= -lcxml  -lots -lm
+LIBATLAS	= -L/usr/lib/atlas3.7.8 -lf77blas -latlas -lm 
+else
+LIBCXML		= -lcxmlp -lots -lm
+LIBATLAS	= -L/usr/lib/atlas3.7.8p -llapack -lptcblas -lptf77blas -latlas -lpthread -lm
+endif
